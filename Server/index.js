@@ -10,7 +10,7 @@ const app = express();
 const moviesRouter = require("./routes/movie-router");
 
 const PORT = process.env.PORT || 8080;
-
+console.log(PORT);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
