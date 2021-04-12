@@ -1,0 +1,28 @@
+// MERNmovieApp
+{
+  "name": "mern-movies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm install && cd Client && npm install",
+    "start": "node server/index.js",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm run start",
+    "dev": "concurrently  --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "author": "Or Golestani",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.0",
+    "nodemon": "^2.0.7"
+  },
+  "description": ""
+}
