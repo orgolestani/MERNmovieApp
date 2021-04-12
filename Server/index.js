@@ -1,13 +1,14 @@
 const dotenv= require('dotenv');
 dotenv.config();
+const path = require('path')
 // General imports 
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const express = require("express");
 const db = require("./DB");
 const app = express();
-
 const moviesRouter = require('./routes/movie-router')
+
 
 const PORT = process.env.PORT || 8080;
 if (process.env.NODE_ENV === 'production') {
